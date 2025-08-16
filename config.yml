@@ -92,7 +92,10 @@ opening_books:
     standard_black:
       selection: best_move
       names:
-        - BlackBook
+        - Optimus2502
+        - Optimus4
+        - DefaultBook
+        - BackupBook
 
     standard_white_tournament:
       selection: best_move
@@ -103,7 +106,10 @@ opening_books:
     standard_black_tournament:
       selection: best_move
       names:
-        - BlackBook
+        - Optimus2502
+        - Optimus4
+        - DefaultBook
+        - BackupBook
 
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black' or '_human' to use the engine only as the specific color or against humans.
