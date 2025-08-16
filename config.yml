@@ -84,8 +84,8 @@ opening_books:
     standard_white:
       selection: weighted_random
       names:
-        - Optimus2502
-        - Optimus4
+        - DefaultBook
+        - BackupBook
 
     standard_black:
       selection: best_move
