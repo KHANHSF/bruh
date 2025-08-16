@@ -90,8 +90,6 @@ opening_books:
     standard_black:
       selection: best_move
       names:
-        - Optimus2502
-        - Optimus4
         - DefaultBook
         - BackupBook
 
@@ -104,8 +102,6 @@ opening_books:
     standard_black_tournament:
       selection: best_move
       names:
-        - Optimus2502
-        - Optimus4
         - DefaultBook
         - BackupBook
 
