@@ -159,7 +159,7 @@ class Chatter:
                 f'{config.offer_draw.consecutive_moves} moves.')
 
     def _get_name_message(self, version: str) -> str:
-        return f'I am Cloud_Classroom_Bot, and I use Sitake-Engine-V2-nogit with BotLi Newest Version'
+        return f'I am Fair_Bot, and I use Sitake-Engine-V2-nogit with BotLi Newest Version'
 
     def _format_message(self, message: str | None) -> str | None:
         if not message:
