@@ -86,7 +86,11 @@ class Chatter:
             case 'eval':
                 await self._send_last_message(chat_message.room)
             case 'motor':
-                await self.api.send_chat_message(self.game_info.id_, chat_message.room, self.lichess_game.engine.name)
+                await self.api.send_chat_message(
+                    self.game_info.id_,
+                    chat_message.room,
+                    f"Sitake-Engine-V2-nogit"
+            )
             case 'name':
                 await self.api.send_chat_message(self.game_info.id_, chat_message.room, self.name_message)
             case 'printeval':
@@ -98,7 +102,7 @@ class Chatter:
                 self.print_eval_rooms.add(chat_message.room)
                 await self.api.send_chat_message(self.game_info.id_,
                                                  chat_message.room,
-                                                 'Type !quiet to stop eval printing.')
+                                                 'See What Happen :)')
                 await self._send_last_message(chat_message.room)
             case 'quiet':
                 self.print_eval_rooms.discard(chat_message.room)
@@ -110,24 +114,15 @@ class Chatter:
                 await self.api.send_chat_message(self.game_info.id_, chat_message.room, message)
             case 'ram':
                 await self.api.send_chat_message(self.game_info.id_, chat_message.room, self.ram_message)
-            case 'roast':
-                roast = self._get_random_roast()
-                await self.api.send_chat_message(self.game_info.id_, chat_message.room, roast)
-            case 'destroy' | 'troll':
-                destroy = self._get_random_destroy()
-                await self.api.send_chat_message(self.game_info.id_, chat_message.room, destroy)
-            case 'quotes':
-                quote = self._get_random_quote()
-                await self.api.send_chat_message(self.game_info.id_, chat_message.room, quote)
             case 'help' | 'commands':
                 if chat_message.room == 'player':
-                    message = 'Supported commands: !cpu, !draw, !eval, !motor, !name, !printeval, !ram, !roast, !destroy, !quotes'
+                    message = 'Supported commands: !cpu, !draw, !eval, !motor, !name, !printeval, !ram'
                 else:
-                    message = 'Supported commands: !cpu, !draw, !eval, !motor, !name, !printeval, !pv, !ram, !roast, !destroy, !quotes'
+                    message = 'Supported commands: !cpu, !draw, !eval, !motor, !name, !printeval, !pv, !ram'
                 await self.api.send_chat_message(self.game_info.id_, chat_message.room, message)
 
     async def _send_last_message(self, room: str) -> None:
-        last_message = self.lichess_game.last_message.replace('Engine', 'Evaluation')
+        last_message = self.lichess_game.last_message.replace('Engine')
         last_message = ' '.join(last_message.split())
         if room == 'spectator':
             last_message = self._append_pv(last_message)
@@ -164,7 +159,7 @@ class Chatter:
                 f'{config.offer_draw.consecutive_moves} moves.')
 
     def _get_name_message(self, version: str) -> str:
-        return f'I am Cloud_Classroom_Bot, and I use {self.lichess_game.engine.name} (BotLi {version})'
+        return f'I am Cloud_Classroom_Bot, and I use Sitake-Engine-V2-nogit with BotLi Newest Version'
 
     def _format_message(self, message: str | None) -> str | None:
         if not message:
