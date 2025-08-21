@@ -229,10 +229,10 @@ messages:
   #   {cpu} to insert CPU information
   #   {ram} to insert RAM size
   # Any other words in curly braces will be removed.
-  greeting: "Hi! I'm {me} running Sitake-Engine-V2-nogit. Good Luck!"                                                              # Message sent to the opponent at the beginning o[...]
-  goodbye: "Good Game!"                                             # Message sent to the opponent after the end of a game.
-  greeting_spectators: ""Hi! I'm {me} running Sitake-Engine-V2-nogit. I hope you enjoy the game!"                            # Message sent to the spectators at the beginning of a game.
-  goodbye_spectators: "Good Bye!"
+  greeting: "Hey, I'm running Sitake-Engine-V2-nogit. Good luck! Type !help for a list of commands." # Message sent to the opponent at the beginning of a game.
+  goodbye: "Good game, see you next time."                                             # Message sent to the opponent after the end of a game.
+  greeting_spectators: "Hey, I'm running Sitake-Engine-V2-nogit. Type !help for a list of commands." # Message sent to the spectators at the beginning of a game.
+  goodbye_spectators: "Thanks for watching." 
 
 whitelist:                                # List of users whose challenges are always accepted.
 # - Username1
