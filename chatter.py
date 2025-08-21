@@ -86,11 +86,7 @@ class Chatter:
             case 'eval':
                 await self._send_last_message(chat_message.room)
             case 'motor':
-                await self.api.send_chat_message(
-                    self.game_info.id_,
-                    chat_message.room,
-                    f"Sitake-Engine-V2-nogit"
-            )
+                await self.api.send_chat_message(self.game_info.id_, chat_message.room, self.lichess_game.engine.name)
             case 'name':
                 await self.api.send_chat_message(self.game_info.id_, chat_message.room, self.name_message)
             case 'printeval':
@@ -122,7 +118,7 @@ class Chatter:
                 await self.api.send_chat_message(self.game_info.id_, chat_message.room, message)
 
     async def _send_last_message(self, room: str) -> None:
-        last_message = self.lichess_game.last_message.replace('Engine')
+        last_message = self.lichess_game.last_message.replace('Engine', 'Evaluation')
         last_message = ' '.join(last_message.split())
         if room == 'spectator':
             last_message = self._append_pv(last_message)
@@ -159,7 +155,7 @@ class Chatter:
                 f'{config.offer_draw.consecutive_moves} moves.')
 
     def _get_name_message(self, version: str) -> str:
-        return f'I am Fair_Bot, and I use Sitake-Engine-V2-nogit with BotLi Newest Version'
+        return f'I am NNUE_Drift, and I use {self.lichess_game.engine.name} (BotLi {version})'
 
     def _format_message(self, message: str | None) -> str | None:
         if not message:
