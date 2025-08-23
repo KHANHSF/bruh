@@ -105,6 +105,11 @@ opening_books:
         - DefaultBook
         - BackupBook
 
+    antichess:
+      selection: best_move
+      name:
+        - abc
+
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black' or '_human' to use the engine only as the specific color or against humans.
 
@@ -249,3 +254,4 @@ books:                                    # Names of the opening books (to be us
   Optimus2502: "./engines/OPTIMUS2502.bin"
   Optimus4: "./engines/OPTIMUS4.bin"
   Goodbook: "./engines/book.bin"
+  abc: "./engines/anti.bin"
