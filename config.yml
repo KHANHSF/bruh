@@ -105,9 +105,14 @@ opening_books:
         - DefaultBook
         - BackupBook
 
-    antichess:
+    antichess_white:
       selection: best_move
-      name:
+      names:
+        - abc
+
+    antichess_black:
+      selection: best_move
+      names:
         - abc
 
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
