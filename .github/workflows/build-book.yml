@@ -20,9 +20,6 @@ jobs:
       run: |
         pip install chess requests
 
-    - name: Fetch games and build PGN
-      run: python fetch_and_build.py
-
     - name: Create Polyglot book
       run: python create_polyglot.py
 
