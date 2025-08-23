@@ -114,6 +114,16 @@ opening_books:
       names:
         - whiteanti
 
+    crazyhouse_white:
+      selection: best_move
+      names:
+        - crazyhouse
+
+    crazyhouse_black:
+      selection: best_move
+      names:
+        - crazyhouse
+
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black' or '_human' to use the engine only as the specific color or against humans.
 
@@ -258,5 +268,6 @@ books:                                    # Names of the opening books (to be us
   Optimus2502: "./engines/OPTIMUS2502.bin"
   Optimus4: "./engines/OPTIMUS4.bin"
   whiteanti: "./engines/anti_book.bin"
+  crazyhouse: "./engines/crazyhouse_book.bin"
 
 
