@@ -24,7 +24,7 @@ engines:
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 8                          # Max CPU threads the engine can use.
       Hash: 8064                           # Max memory (in megabytes) the engine can allocate.
-#      Move Overhead: 200                  # Increase if your bot flags games too often.
+      Move Overhead: 200                  # Increase if your bot flags games too often.
       EvalFile: "horde-28173ddccabe.nnue:racingkings-636b95f085e3.nnue:crazyhouse-8ebf84784ad2.nnue:kingofthehill-978b86d0e6a4.nnue:antichess-dd3cbe53cd4e.nnue:atomic-2cf13ff256cc.nnue:3check-cb5f517c228b.nnue"
     limits:                               # Limits that end the move calculation early.
 #      time: 5.0                           # Max time per move in seconds.
@@ -40,7 +40,7 @@ engines:
     uci_options:                          # Arbitrary UCI options passed to the engine.
       Threads: 8                          # Max CPU threads the engine can use.
       Hash: 4096                           # Max memory (in megabytes) the engine can allocate.
-      Move Overhead: 200                  # Increase if your bot flags games too often.
+      Move Overhead: 150                  # Increase if your bot flags games too often.
     limits:                               # Limits that end the move calculation early.
 #      time: 5.0                           # Max time per move in seconds.
 #      depth: 26                           # Max depth per move.
@@ -104,16 +104,6 @@ opening_books:
       names:
         - DefaultBook
         - BackupBook
-
-    antichess_white:
-      selection: best_move
-      names:
-        - abc
-
-    antichess_black:
-      selection: best_move
-      names:
-        - abc
 
 #   'antichess', 'atomic', 'chess960', 'crazyhouse', 'horde', 'kingofthehill', 'racingkings' and '3check' as well.
 #   Append '_white', '_black' or '_human' to use the engine only as the specific color or against humans.
