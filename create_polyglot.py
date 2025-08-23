@@ -105,4 +105,4 @@ def build_book_file(pgn_path, book_path):
     book.save_as_polyglot(book_path)
 
 if __name__ == "__main__":
-    build_book_file("soo.pgn", "cra.bin")
+    build_book_file("lichess_ToromBot_2025-08-23.pgn", "cra.bin")
